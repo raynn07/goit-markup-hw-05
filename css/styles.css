@@ -260,6 +260,7 @@ ul{
 }
 
 .web-studio-main{
+    background-repeat: no-repeat;
     background-color:var(--main-background);
     padding-top: 200px;
     padding-bottom: 200px;
@@ -278,6 +279,7 @@ h1{
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-align: center;
+    margin: 0;
 
 }
 
@@ -401,16 +403,16 @@ h3{
 }
 
 
-.photo-cards-socials-hover:hover svg,
 .photo-cards-socials div:hover{
-    fill: white;
     background-color: var(--selected);
-    transition: background-color var(--transition) , fill var(--transition);
+    transition: background-color var(--transition);
 }
 
-.photo-cards-socials svg{
-    background-color: white;
+.photo-cards-socials-hover:hover svg{
+    fill: white;
+    transition : fill var(--transition);
 }
+
 
 .photo-cards-socials svg{
     width: 20px;
@@ -680,12 +682,9 @@ h3{
 /* MODAL */
 .is-hidden{
     visibility: hidden;
+    opacity: 0;
 }
 
-/* .modal-section{
-    position: relative;
-    width: 1600px;
-} */
 
 .modal {
     margin-left: 8px;
@@ -699,6 +698,7 @@ h3{
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.2);
+    transition: visibility 250ms linear , opacity 250ms linear;    
  }
 
 .modal button{
@@ -710,17 +710,16 @@ h3{
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    font-size: 20px
-    
+    font-size: 20px;
 }
 .modal-content{
+    z-index: 100099;
     width: 528px;
     height: 581px;
     background-color: white;
-    position: relative;
-}
-
-.modal button:hover{
-    background-color: rgb(184, 28, 28);
-    transition: background-color var(--transition);
+    position: fixed;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
